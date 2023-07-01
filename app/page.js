@@ -63,7 +63,8 @@ const HomePage = () => {
     <MainContainer>
       <Title>Lerman Institute for the Advancement of Science</Title>
       <Quote>
-        "I hear and I forget; I see and I remember; I do and I understand.”
+        &quot;I hear and I forget; I see and I remember; I do and I
+        understand.&quot;
       </Quote>
       <QuoteAuthor>Chinese proverb</QuoteAuthor>
       <Description>
