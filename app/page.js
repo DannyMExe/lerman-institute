@@ -36,13 +36,13 @@ const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
 `;
 
 const Image = styled.img`
   width: 500px;
   height: auto;
-  margin-right: 20px;
 `;
 
 const ImageDescription = styled.p`
@@ -82,7 +82,7 @@ const HomePage = () => {
       <ImageContainer>
         <Image src="/polution.jpg" alt="A Student's art on pollution" />
         <ImageDescription>
-          Artwork showing a world ruined by pollution{" "}
+          Artwork showing a world ruined by pollution <br />
           <span>
             painted by a student at the Science Institute, Columbia College
           </span>
