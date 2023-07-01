@@ -81,7 +81,12 @@ const HomePage = () => {
       </Description>
       <ImageContainer>
         <Image src="/polution.jpg" alt="A Student's art on pollution" />
-        <ImageDescription>Image 1 description</ImageDescription>
+        <ImageDescription>
+          Artwork showing a world ruined by pollution{" "}
+          <span>
+            painted by a student at the Science Institute, Columbia College
+          </span>
+        </ImageDescription>
       </ImageContainer>
       <Description>
         The 21st Century is truly the century of science and technology. If we
