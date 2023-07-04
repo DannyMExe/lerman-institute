@@ -14,9 +14,9 @@ function ContactPage() {
       <h1>Contact</h1>
       <p>
         Thank you for visiting our website! If you have any questions or
-        comments, We'd love to hear from you. Please feel free to reach out via
-        email or any of my social media platforms. We look forward to connecting
-        with you!
+        comments, We&apos;d love to hear from you. Please feel free to reach out
+        via email or any of my social media platforms. We look forward to
+        connecting with you!
       </p>
       <div className={styles.contactContainer}>
         <Link href="mailto:info@lermaninstitute.org">
