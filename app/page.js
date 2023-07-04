@@ -1,73 +1,17 @@
-"use client";
-
-import styled from "styled-components";
-
-const MainContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 0 20px;
-`;
-
-const Title = styled.h1`
-  font-size: 38px;
-  margin-bottom: 20px;
-`;
-
-const Quote = styled.h3`
-  font-size: 28px;
-  font-style: italic;
-  margin-bottom: 0;
-`;
-
-const QuoteAuthor = styled.p`
-  font-size: 20px;
-`;
-
-const Description = styled.p`
-  font-size: 26px;
-  margin-bottom: 40px;
-  text-align: center;
-`;
-
-const ImageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-`;
-
-const Image = styled.img`
-  width: 500px;
-  height: auto;
-`;
-
-const ImageDescription = styled.p`
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 500;
-  text-align: center;
-  color: gray;
-
-  span {
-    font-size: 12px;
-    font-weight: 300;
-  }
-`;
+import styles from "../styles/Page.module.css";
 
 const HomePage = () => {
   return (
-    <MainContainer>
-      <Title>Lerman Institute for the Advancement of Science</Title>
-      <Quote>
+    <div className={styles.mainContainer}>
+      <h1 className={styles.title}>
+        Lerman Institute for the Advancement of Science
+      </h1>
+      <h3 className={styles.quote}>
         &quot;I hear and I forget; I see and I remember; I do and I
         understand.&quot;
-      </Quote>
-      <QuoteAuthor>Chinese proverb</QuoteAuthor>
-      <Description>
+      </h3>
+      <p className={styles.quoteAuthor}>Chinese proverb</p>
+      <p className={styles.description}>
         The Lerman Institute believes strongly in this proverb, that is why we
         incorporate visualization and art in the teaching of science. Students
         remember and understand abstract scientific concepts best by creating
@@ -78,17 +22,21 @@ const HomePage = () => {
         drama (No Tech). These projects can be used as an alternative assessment
         method. This method has been proven successful with underprivileged
         students around the globe.
-      </Description>
-      <ImageContainer>
-        <Image src="/polution.jpg" alt="A Student's art on pollution" />
-        <ImageDescription>
+      </p>
+      <div className={styles.imageContainer}>
+        <img
+          className={styles.image}
+          src="/polution.jpg"
+          alt="A Student's art on pollution"
+        />
+        <p className={styles.imageDesc}>
           Artwork showing a world ruined by pollution <br />
-          <span>
+          <span className={styles.imageDescSpan}>
             painted by a student at the Science Institute, Columbia College
           </span>
-        </ImageDescription>
-      </ImageContainer>
-      <Description>
+        </p>
+      </div>
+      <p className={styles.description}>
         The 21st Century is truly the century of science and technology. If we
         will not make science and technology accessible to all, we will form a
         two-class society, divided not by royalty or economic status, but by
@@ -96,21 +44,22 @@ const HomePage = () => {
         education is a human right that belongs to all. Therefore, it is
         essential that we employ every method possible to make chemistry
         accessible to all in the 21st Century.
-      </Description>
-      <ImageContainer>
-        <Image
+      </p>
+      <div className={styles.imageContainer}>
+        <img
+          className={styles.image}
           src="/societyDivided.png"
           alt="Drawing respresenting High tech and no tech societies divided"
         />
-        <ImageDescription>
+        <p className={styles.imageDesc}>
           A two class society
           <br />
-          <span>
+          <span className={styles.imageDescSpan}>
             drawn by a student at the Science Institute, Columbia College
           </span>
-        </ImageDescription>
-      </ImageContainer>
-    </MainContainer>
+        </p>
+      </div>
+    </div>
   );
 };
 

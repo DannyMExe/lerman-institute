@@ -1,0 +1,74 @@
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.container h1 {
+  margin-block: 2%;
+}
+
+.container p {
+  font-size: 22px;
+  font-weight: 600;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 4%;
+
+  @media (max-width: 850px) {
+    width: 85%;
+  }
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6%;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  max-width: 200px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contactIcon {
+  font-size: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  text-decoration: none;
+}
+
+.emailIcon {
+  color: #b33;
+}
+
+.twitterIcon {
+  color: #1da1f2;
+}
+
+.linkedinIcon {
+  color: #0077b5;
+}
+
+.youtubeIcon {
+  color: #ff0000;
+}
