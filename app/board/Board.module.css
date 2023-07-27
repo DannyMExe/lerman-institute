@@ -1,0 +1,49 @@
+.container {
+    margin-top: 25px;
+}
+
+.title {
+    text-align: center;
+}
+
+.boardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-top: 20px;
+}
+.memberContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-inline: 15%;
+    padding-block: 2%;
+    /* align-items: center; */
+    /* background-color: aliceblue; */
+}
+
+.boardContainer > *:nth-child(odd) {
+    background-color: white; /* Add your desired background color here */
+  }
+
+.memberContainer .image {
+    width: 300px;
+    height: 300px;
+    
+}
+
+.bioContainer {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+ .bio {
+    /* line-height: 1; */
+    font-size: clamp(12px, 2vh, 20px);
+
+ }
+
+/* .name::first-letter {
+    float: left;
+    font-family: Georgia, serif;
+  } */
