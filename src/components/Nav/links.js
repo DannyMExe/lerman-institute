@@ -5,6 +5,7 @@ import { BsFillFileEarmarkPersonFill, BsGlobe2 } from "react-icons/bs";
 import { IoMdContact } from "react-icons/io";
 import { BiNews } from "react-icons/bi";
 import { GoVideo } from "react-icons/go";
+import { IoPeopleCircle } from "react-icons/io5"
 
 export const links = [
   { id: "home", path: "/", title: "HOME", icon: <FaHome /> },
@@ -15,12 +16,15 @@ export const links = [
   //   title: "AWARDS",
   //   icon: <FaAward />,
   // },
-  // {
-  //   id: "publications",
-  //   path: "/publications",
-  //   title: "PUBLICATIONS",
-  //   icon: <BiNews />,
-  // },
+  {
+    id: "board", path: "/board", title: "OUR BOARD", icon: <IoPeopleCircle/>,
+  },
+  {
+    id: "publications",
+    path: "/publications",
+    title: "PUBLICATIONS",
+    icon: <BiNews />,
+  },
   {
     id: "contact",
     path: "/contact",

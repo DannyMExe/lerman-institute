@@ -1,24 +1,30 @@
 import React from "react";
 import Link from "next/link";
 import { links } from "./Nav/links";
-import Logo from "../../public/LIASLogoNoText.png";
+import Logo from "../../public/LIASLogoNoText_1K.png";
 import Image from "next/image";
 
 import styles from "./Header.module.css"; // Import the CSS module
+import NavBar from "./Nav/NavBar";
+import { useMediaQuery } from "react-responsive";
 
 function Header() {
+
+  const isMobile = useMediaQuery({maxWidth: 800})
+
   return (
     <div className={styles.headerContainer}>
+      {isMobile && <NavBar />}
       <div className={styles.headerMainCenter}>
         <div className={styles.logoContainer}>
           <Image src={Logo} height={50} />
         </div>
-        <Link href="/" style={{ justifySelf: "center" }}>
-          <h1 className={styles.siteTitle}>Lerman Institute</h1>
+        <Link href="/" className={styles.titleLink}>
+          <h1 className={styles.siteTitle}>Lerman Institute for the Advancement of Science</h1>
         </Link>
         {/* <div style={{ width: "38px" }}></div> */}
       </div>
-      <div className={styles.linksContainer}>
+      {!isMobile && <div className={styles.linksContainer}>
         {links.map((link, idx) => (
           <Link
             id={link.id}
@@ -29,7 +35,7 @@ function Header() {
             {link.title}
           </Link>
         ))}
-      </div>
+      </div>}
     </div>
   );
 }

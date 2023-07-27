@@ -2,8 +2,15 @@
 .headerContainer {
   color: white;
   width: 100%;
-  padding-top: 25px;
-  background-color: rgba(255, 255, 255, 0);
+  /* padding-top: 25px; */
+  /* background-color: rgba(255, 255, 255, 0); */
+  background-image: url(../../public/headerBg.jpg);
+  background-position: 50% 63%;
+  background-size: cover;
+  /* padding-bottom: 15%; */
+  padding-block: 7.5%;
+  /* height: 25vh; */
+  /* display: flex; */
 }
 
 .headerContainer > div {
@@ -17,6 +24,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.titleLink {
+  width: 50%;
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+  .titleLink {
+    width: 70%;
+  }
+}
+
+@media (min-width: 801px) {
+  .titleLink {
+    width: 50%;
+  }
 }
 
 .headerIconButton {
@@ -41,17 +64,37 @@
   text-align: center;
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  /* flex-flow: row wrap; */
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 15px;
-  gap: 2rem;
+  padding-inline: 20px;
+  gap: 3%;
+  /* margin-block: 50px; */
+  height: 100%;
 }
 
 .headerContainer .siteTitle {
-  width: fit-content;
-  font-size: 2.1em;
-  flex: 2 2 200%;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  font-size: 1.2em;
+  /* flex: 2 2 200%; */
+  color: white;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 5px 3px 5px black;
+  /* -webkit-text-stroke-width: 1.5px; */
+  stroke: #264561;
+
+  /* -webkit-text-stroke-color: #264561; */
+  @media (min-width: 600px) {
+    font-size: 2em;
+    /* width: 75%; */
+  }
+  @media (min-width: 900px) {
+    font-size: 2.2em;
+  }
 }
 
 /* LinksContainer */
