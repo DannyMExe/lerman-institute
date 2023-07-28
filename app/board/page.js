@@ -7,6 +7,7 @@ const board = [
     title: "President",
     bio: "Zafra Lerman is an American chemist, educator, and humanitarian. She conducted research on isotope effects at Cornell and Northwestern Universities in the US, and the ETH, Zurich, Switzerland. She has received over 40 awards for her work in education, human rights, and science diplomacy, including the 1999 Presidential Award from U.S. President Clinton, the 2005 Nyholm Prize for Education from the Royal Society of Chemistry (UK), the 2015 Science Diplomacy Award from the American Association for the Advancement of Science (AAAS), the 2016 Andrei Sakharov prize for human rights from the American Physical Society (APS), and the 2016 Peace and Justice award from the UN NOVUS Summit. She was honored four times by the U.S. Congress with speeches about her work in 2002, 2004, 2013, and 2019 and was nominated five times for the Nobel Peace Prize. She developed an innovative way to teach science through art, music, dance, and drama. Her work has been featured on many national and international television and media outlets.",
     image: "ZafraLerman.png",
+    zafra: true,
   },
   {
     name: "Glennon Graham",
@@ -40,7 +41,7 @@ const Board = () => {
               <div className={styles.bioContainer}>
                 <h3 className={styles.name}>{member.name}</h3>
                 <h4>{member.title}</h4>
-                <p className={styles.bio}>{member.bio}</p>
+                <p className={member.zafra ? styles.zafraBio : styles.bio}>{member.bio}</p>
               </div>
             </div>
           );
