@@ -14,18 +14,21 @@ const board = [
     title: "Director",
     bio: "Glennon Graham was born in Denmark, South Carolina. From this beginning, he went on to receive a PhD in American History from Northwestern University. He retired from his position at Columbia College Chicago as a professor of American History and director of the history program. Glennon is a two-time Fulbright Scholar who spent a year in Sierra Leone and a year in Malawi. He was a member of the Westside Black History Project. Glennon devoted his life to education and especially of the underprivileged.",
     image: "GlennonGraham.jpg",
+    zafra: false,
   },
   {
     name: "Lee Oberlander",
     title: "Director",
     bio: "After 40 years in the construction business, at the drafting table and on construction sites, Lee became an artist, converting his warehouse to a studio and letting the paint fly. “When I’m working at my easel, I succumb to a magical mix of right-brain abstraction and heady emotions, a full-body process that is pure joy for me to experience.” Lee draws inspiration from the world around him, whether it’s the curve of a mannequin’s arm in a store window or the geometric whorl of a desert succulent. Lee’s work is rooted in a deep appreciation of the true colors of nature, Eastern philosophies and his artist idol, David Hockney.",
     image: "LeeOberlander.jpg",
+    zafra: false,
   },
   {
     name: "Benjamin Margolin",
     title: "Director",
     bio: "Ben has nearly a decade of experience improving corporate operations and working with non-profits. He began his career on Capitol Hill working for Congressman Jim Renacci, who served on the Ways & Means and Budget Committees. From there he transitioned to being a consultant in the financial services industry and working for a Registered Investment Advisor. Finally, Ben has worked for multiple early-stage startups, scaling operations, and improving efficiency. Ben and his family currently live in Boston, MA.",
     image: "BenMargolin.jpg",
+    zafra: false,
   },
 ];
 
