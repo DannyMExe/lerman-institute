@@ -39,7 +39,7 @@ const Board = () => {
       <div className={styles.boardContainer}>
         {board.map((member, idx) => {
           return (
-            <div className={styles.memberContainer} id={idx}>
+            <div className={styles.memberContainer} key={idx}>
               <img className={styles.image} src={`/${member.image}`} />
               <div className={styles.bioContainer}>
                 <h3 className={styles.name}>{member.name}</h3>
