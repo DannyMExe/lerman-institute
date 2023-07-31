@@ -9,7 +9,7 @@
 .boardContainer {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    /* gap: 20px; */
     margin-top: 20px;
 }
 .memberContainer {
@@ -17,7 +17,7 @@
     justify-content: center;
     gap: 20px;
     padding-inline: 15%;
-    padding-block: 2%;
+    padding-block: 2.5%;
     /* align-items: center; */
     /* background-color: aliceblue; */
 }

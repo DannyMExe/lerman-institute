@@ -3,9 +3,9 @@ import styles from "../styles/Page.module.css";
 const HomePage = () => {
   return (
     <div className={styles.mainContainer}>
-      <h1 className={styles.title}>
+      {/* <h1 className={styles.title}>
         Lerman Institute for the Advancement of Science
-      </h1>
+      </h1> */}
       <h3 className={styles.quote}>
         &quot;I hear and I forget; I see and I remember; I do and I
         understand.&quot;
