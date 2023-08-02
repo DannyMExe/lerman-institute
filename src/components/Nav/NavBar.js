@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { slide as Menu } from "react-burger-menu";
 import Link from "next/link";
 import { links } from "./links";
+import styles from "./NavBar.module.css";
 // import styled from "styled-components";
 
 // const LinkCont = styled.div`

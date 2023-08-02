@@ -18,7 +18,10 @@ function Header() {
 
   return (
     <div className={styles.headerContainer}>
-      {isMobile && <NavBar />}
+      {/* {isMobile && <NavBar />} */}
+      <div className={styles.menu}>
+        <NavBar />
+      </div>
       <div className={styles.headerMainCenter}>
         <div className={styles.logoContainer}>
           <Image src={Logo} height={50} />
@@ -30,7 +33,7 @@ function Header() {
         </Link>
         {/* <div style={{ width: "38px" }}></div> */}
       </div>
-      {!isMobile && (
+      {/* {!isMobile && (
         <div className={styles.linksContainer}>
           {links.map((link, idx) => (
             <Link
@@ -43,7 +46,19 @@ function Header() {
             </Link>
           ))}
         </div>
-      )}
+      )} */}
+      <div className={styles.linksContainer}>
+        {links.map((link, idx) => (
+          <Link
+            id={link.id}
+            key={idx}
+            href={link.path}
+            target={link.id === "malta" ? "_blank" : ""}
+          >
+            {link.title}
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

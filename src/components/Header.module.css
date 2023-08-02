@@ -115,6 +115,9 @@
   width: 100%;
   text-align: center;
   margin: 0 auto;
+  @media (max-width: 800px) {
+    display: none;
+  }
 }
 
 .headerContainer .linksContainer a {
@@ -145,4 +148,10 @@
 .headerContainer .logoContainer img {
   height: 100px;
   width: auto;
+}
+
+.menu {
+  @media (min-width: 801px) {
+    display: none;
+  }
 }
