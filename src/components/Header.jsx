@@ -9,16 +9,8 @@ import NavBar from "./Nav/NavBar";
 import { useMediaQuery } from "react-responsive";
 
 function Header() {
-  const [isMobile, setIsMobile] = useState(false);
-  const tempMobile = useMediaQuery({ maxWidth: 800 });
-
-  useEffect(() => {
-    setIsMobile(tempMobile);
-  }, []);
-
   return (
     <div className={styles.headerContainer}>
-      {/* {isMobile && <NavBar />} */}
       <div className={styles.menu}>
         <NavBar />
       </div>
@@ -33,20 +25,6 @@ function Header() {
         </Link>
         {/* <div style={{ width: "38px" }}></div> */}
       </div>
-      {/* {!isMobile && (
-        <div className={styles.linksContainer}>
-          {links.map((link, idx) => (
-            <Link
-              id={link.id}
-              key={idx}
-              href={link.path}
-              target={link.id === "malta" ? "_blank" : ""}
-            >
-              {link.title}
-            </Link>
-          ))}
-        </div>
-      )} */}
       <div className={styles.linksContainer}>
         {links.map((link, idx) => (
           <Link
