@@ -52,7 +52,7 @@
   text-align: center;
   margin: auto;
   margin-bottom: 20px;
-  font-size: 1.2em;
+  font-size: medium;
   padding-bottom: 0;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .studentInfo {
-  font-size: small !important;
+  font-size: large !important;
 }
 
 @media (max-width: 750px) {
