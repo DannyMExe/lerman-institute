@@ -78,11 +78,18 @@
   width: 50vw;
 }
 
+.studentInfo {
+  font-size: small !important;
+}
+
 @media (max-width: 750px) {
   .home .video {
     width: 100%;
   }
   .bg {
+    padding-inline: 15px;
+  }
+  .studentInfo {
     padding-inline: 15px;
   }
 }
