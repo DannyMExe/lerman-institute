@@ -7,8 +7,8 @@ const HomePage = () => {
         Lerman Institute for the Advancement of Science
       </h1> */}
       <h3 className={styles.quote}>
-        &quot;I hear and I forget; I see and I remember; I do and I
-        understand.&quot;
+        &quot;I hear and I forget;
+        <br /> I see and I remember; <br />I do and I understand.&quot;
       </h3>
       <p className={styles.quoteAuthor}>Chinese proverb</p>
       <p className={styles.description}>
@@ -32,7 +32,8 @@ const HomePage = () => {
         <p className={styles.imageDesc}>
           Artwork showing a world ruined by pollution <br />
           <span className={styles.imageDescSpan}>
-            painted by a student at the Science Institute, Columbia College
+            painted by a student in Professor Zafra Lerman's class at the
+            Science Institute, Columbia College
           </span>
         </p>
       </div>
@@ -55,7 +56,8 @@ const HomePage = () => {
           A two class society
           <br />
           <span className={styles.imageDescSpan}>
-            drawn by a student at the Science Institute, Columbia College
+            drawn by a student in Professor Zafra Lerman's class at the Science
+            Institute, Columbia College
           </span>
         </p>
       </div>

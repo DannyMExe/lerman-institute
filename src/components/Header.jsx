@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { links } from "./Nav/links";
 import Logo from "../../public/LIASLogoNoText_1K.png";
@@ -9,8 +9,12 @@ import NavBar from "./Nav/NavBar";
 import { useMediaQuery } from "react-responsive";
 
 function Header() {
+  const [isMobile, setIsMobile] = useState(false);
+  const tempMobile = useMediaQuery({ maxWidth: 800 });
 
-  const isMobile = useMediaQuery({maxWidth: 800})
+  useEffect(() => {
+    setIsMobile(tempMobile);
+  }, []);
 
   return (
     <div className={styles.headerContainer}>
@@ -20,22 +24,26 @@ function Header() {
           <Image src={Logo} height={50} />
         </div>
         <Link href="/" className={styles.titleLink}>
-          <h1 className={styles.siteTitle}>Lerman Institute for the Advancement of Science</h1>
+          <h1 className={styles.siteTitle}>
+            Lerman Institute for the Advancement of Science
+          </h1>
         </Link>
         {/* <div style={{ width: "38px" }}></div> */}
       </div>
-      {!isMobile && <div className={styles.linksContainer}>
-        {links.map((link, idx) => (
-          <Link
-            id={link.id}
-            key={idx}
-            href={link.path}
-            target={link.id === "malta" ? "_blank" : ""}
-          >
-            {link.title}
-          </Link>
-        ))}
-      </div>}
+      {!isMobile && (
+        <div className={styles.linksContainer}>
+          {links.map((link, idx) => (
+            <Link
+              id={link.id}
+              key={idx}
+              href={link.path}
+              target={link.id === "malta" ? "_blank" : ""}
+            >
+              {link.title}
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

@@ -58,7 +58,7 @@
 
 @media (max-width: 750px) {
   .video p {
-    height: 5vh;
+    height: auto;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -81,5 +81,8 @@
 @media (max-width: 750px) {
   .home .video {
     width: 100%;
+  }
+  .bg {
+    padding-inline: 15px;
   }
 }

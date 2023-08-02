@@ -22,8 +22,8 @@
     /* background-color: aliceblue; */
 }
 
-.boardContainer > *:nth-child(odd) {
-    background-color: white; /* Add your desired background color here */
+.boardContainer > *:nth-child(even) {
+    background-color: rgb(86, 201, 255); /* Add your desired background color here */
   }
 
 .memberContainer .image {

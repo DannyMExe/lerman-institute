@@ -13,6 +13,7 @@ const VideoBar = ({ videos, home }) => {
           <div key={idx} className={styles.video}>
             <Youtube videoId={video.id} opts={options} />
             <h3 className={styles.bg}>{video.title}</h3>
+            <p className={styles.bg}>{video.studentInfo}</p>
             <p className={styles.bg}>{video.desc}</p>
           </div>
         );
