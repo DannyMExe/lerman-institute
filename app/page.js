@@ -32,7 +32,7 @@ const HomePage = () => {
         <p className={styles.imageDesc}>
           Artwork showing a world ruined by pollution <br />
           <span className={styles.imageDescSpan}>
-            painted by a student in Professor Zafra Lerman's class at the
+            painted by a student in Professor Zafra Lerman&apos;s class at the
             Science Institute, Columbia College
           </span>
         </p>
@@ -56,8 +56,8 @@ const HomePage = () => {
           A two class society
           <br />
           <span className={styles.imageDescSpan}>
-            drawn by a student in Professor Zafra Lerman's class at the Science
-            Institute, Columbia College
+            drawn by a student in Professor Zafra Lerman&apos;s class at the
+            Science Institute, Columbia College
           </span>
         </p>
       </div>
