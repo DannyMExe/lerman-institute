@@ -12,16 +12,16 @@ const HomePage = () => {
       </h3>
       <p className={styles.quoteAuthor}>Chinese proverb</p>
       <p className={styles.description}>
-        The Lerman Institute believes strongly in this proverb, that is why we
-        incorporate visualization and art in the teaching of science. Students
-        remember and understand abstract scientific concepts best by creating
-        their own artistic projects. Through this process, students take an
-        active role in the learning process, instead of only being passive
-        observers. The students can produce visualization projects using the
-        media of their choice, from computer animation (High Tech) to dance and
-        drama (No Tech). These projects can be used as an alternative assessment
-        method. This method has been proven successful with underprivileged
-        students around the globe.
+        The Lerman Institute believes strongly in this proverb, which is why we
+        incorporate visualization and art in science teaching. Students remember
+        and understand abstract scientific concepts best by creating their own
+        artistic projects. Through this process, students actively participate
+        in the learning process instead of only being passive observers. The
+        students can produce visualization projects using the media of their
+        choice, from computer animation (High Tech) to dance and drama (No
+        Tech). These projects can be used as an alternative assessment method.
+        This method has been proven successful with underprivileged students
+        around the globe.
       </p>
       <div className={styles.imageContainer}>
         <img
@@ -38,13 +38,13 @@ const HomePage = () => {
         </p>
       </div>
       <p className={styles.description}>
-        The 21st Century is truly the century of science and technology. If we
-        will not make science and technology accessible to all, we will form a
-        two-class society, divided not by royalty or economic status, but by
+        The 21st century is indeed the century of science and technology. If we
+        do not make science and technology accessible to all, we will form a
+        two-class society, divided not by royalty or economic status but by
         knowledge of science and technology. It is my tenet in life that science
-        education is a human right that belongs to all. Therefore, it is
-        essential that we employ every method possible to make chemistry
-        accessible to all in the 21st Century.
+        education is a human right that belongs to all. Therefore, we must
+        employ every method possible to make science accessible to all in the
+        21st century.
       </p>
       <div className={styles.imageContainer}>
         <img
