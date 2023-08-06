@@ -80,8 +80,8 @@ const videos = () => {
       <VideoBar videos={videos} />
       <VideoBar videos={addVideos} nodesc={true} />
       <p className={styles.disclamer}>
-        All videos were produced by students from Professor Lerman's class at
-        the Science Institue, Columbia College Chicago
+        All videos were produced by students from Professor Lerman&apos;s class
+        at the Science Institue, Columbia College Chicago
       </p>
     </div>
   );
