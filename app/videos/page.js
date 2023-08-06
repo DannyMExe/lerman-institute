@@ -9,7 +9,7 @@ const videos = () => {
       title: "Period Table: The Elements Dance",
       desc: `Our hero falls in love with Solid, but “When she warms to him, through his fingers she runs,” and when his love heats up with Liquid, “Her love escaped from him just like a vapor.”`,
       studentInfo:
-        "Performed by low-income and homeless middle school students from Stairway of the Stars Dance Studio in Maywood, Il. Their dance teacher, Heidi Baumann Renteria, was a student of Professor Zafra Lerman's. Many of the dancers continued to college and one even went for a PhD in biochemistry.",
+        "Performed by low-income and homeless middle school students from Stairway of the Stars Dance Studio in Maywood, Il. Their dance teacher, Heidi Baumann Renteria, was a student of Professor Zafra Lerman's. Many of the dancers continued to college and one even went for a PhD in biochemistry. Zafra Lerman, as the head of the Science Institute, and several of the faculty members, were teaching these students science through dance.",
     },
     {
       id: "6wLCKkr_yQk",
