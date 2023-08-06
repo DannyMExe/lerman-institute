@@ -31,9 +31,9 @@
   align-items: center;
 }
 
-.titleLink {
+/* .titleLink {
   width: 50%;
-}
+} */
 
 @media (min-width: 350px) and (max-width: 800px) {
   .titleLink {
@@ -44,9 +44,9 @@
 }
 
 @media (min-width: 801px) {
-  .titleLink {
+  /* .titleLink {
     width: 50%;
-  }
+  } */
 }
 
 .headerIconButton {
@@ -115,6 +115,9 @@
   }
   @media (min-width: 900px) {
     font-size: 2.2em;
+  }
+  @media (min-width: 1400px) {
+    font-size: 2.8em;
   }
 }
 

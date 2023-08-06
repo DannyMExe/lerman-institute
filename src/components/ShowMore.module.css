@@ -7,11 +7,12 @@
 
 .bg {
   width: 100%;
-  text-align: center;
+  text-align: justify;
   margin: auto;
   margin-bottom: 20px;
   font-size: medium;
   padding-bottom: 0;
+  padding-inline: 15px;
 }
 
 @media (max-width: 750px) {

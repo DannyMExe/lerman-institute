@@ -26,6 +26,9 @@
   @media (min-width: 900px) {
     font-size: 1.8em;
   }
+  @media (min-width: 1400px) {
+    font-size: 2.2em;
+  }
 }
 
 .quoteAuthor {
@@ -36,8 +39,8 @@
   font-size: 26px;
   margin-bottom: 40px;
   margin-top: 20px;
-  text-align: center;
-  padding-inline: 35px;
+  text-align: justify;
+  padding-inline: 5%;
 }
 
 @media (max-width: 600px) {
@@ -83,7 +86,7 @@
     padding: 0;
   }
   .imageContainer {
-    background-color: rgb(86, 201, 255);
+    /* background-color: rgb(86, 201, 255); */
     padding: 10px;
   }
 }

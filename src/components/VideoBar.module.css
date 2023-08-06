@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 10px;
 }
 
 .videoContainer iframe {
@@ -20,7 +21,7 @@
 
 /* Video */
 .video {
-  width: 33%;
+  width: calc(33% - 20px);
   align-items: center;
   justify-content: center;
   scroll-snap-align: start;
@@ -40,7 +41,8 @@
 .video h3 {
   text-align: center;
   font-size: 1.8em;
-  padding-block: 15px;
+  padding: 15px;
+  padding-top: 5px;
   font-weight: 500;
 }
 
@@ -52,7 +54,7 @@
 
 .video p {
   width: 100%;
-  text-align: center;
+  text-align: justify;
   margin: auto;
   margin-bottom: 20px;
   font-size: medium;
@@ -83,6 +85,7 @@
 
 .studentInfo {
   font-size: large !important;
+  padding-inline: 15px;
 }
 
 @media (max-width: 750px) {
