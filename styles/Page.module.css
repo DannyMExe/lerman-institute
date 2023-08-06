@@ -15,10 +15,17 @@
 }
 
 .quote {
-  font-size: 28px;
+  /* font-size: 28px; */
+  font-size: 1.4em;
   font-style: italic;
   margin-bottom: 0;
   text-align: center;
+  @media (min-width: 600px) {
+    font-size: 1.6em;
+  }
+  @media (min-width: 900px) {
+    font-size: 1.8em;
+  }
 }
 
 .quoteAuthor {
@@ -47,7 +54,8 @@
   align-items: center;
   margin-bottom: 20px;
   width: 100%;
-  background-color: rgb(86, 201, 255);
+  background-color: #bdd6f4;
+  /* background-color: #799ac5; */
   padding-block: 20px;
 }
 
