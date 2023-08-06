@@ -1,15 +1,45 @@
- .bg {
-     width: 100%;
-     text-align: center;
-     margin: auto;
-     margin-bottom: 20px;
-     font-size: medium;
-     padding-bottom: 0;
-    }
-  
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
+  font-size: medium;
+  padding-bottom: 0;
+}
 
 @media (max-width: 750px) {
-    .bg {
-      padding-inline: 15px;
-    }
+  .bg {
+    padding-inline: 15px;
   }
+}
+
+.showMoreButton {
+  background-color: #3498db; /* Blue color - you can customize this */
+  color: #fff; /* Text color - you can customize this */
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 150px;
+}
+
+.showMoreButton:hover {
+  background-color: #2980b9; /* Darker blue color on hover - you can customize this */
+}
+
+.showMoreButton:focus {
+  outline: none;
+}
+
+.showMoreButton.expanded {
+  transform: rotate(180deg); /* Rotate the button text when expanded */
+}

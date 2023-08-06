@@ -8,13 +8,16 @@ const ShowMore = ({ text, maxCharacters }) => {
     setShowMore(!showMore);
   };
 
-  const displayText = showMore ? text : text.slice(0, maxCharacters);
+  const displayText = showMore ? text : text.substr(0, maxCharacters).trim();
 
   return (
-    <div>
-      <p className={styles.bg}>{displayText}</p>
+    <div className={styles.textContainer}>
+      <p className={styles.bg}>
+        {displayText}
+        {!showMore && text.length > maxCharacters && "..."}
+      </p>
       {text.length > maxCharacters && (
-        <button onClick={toggleShowMore}>
+        <button className={styles.showMoreButton} onClick={toggleShowMore}>
           {showMore ? "Show Less" : "Show More"}
         </button>
       )}
