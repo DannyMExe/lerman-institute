@@ -4,7 +4,7 @@ import Youtube from "react-youtube";
 import styles from "./VideoBar.module.css"; // Import the CSS module
 import ShowMore from "./showMore";
 
-const VideoBar = ({ videos, home }) => {
+const VideoBar = ({ videos, home, nodesc }) => {
   const options = {};
 
   return (
@@ -16,7 +16,11 @@ const VideoBar = ({ videos, home }) => {
             <h3 className={styles.bg}>{video.title}</h3>
             <p className={styles.studentInfo}>{video.studentInfo}</p>
             {/* <p className={styles.bg}>{video.desc}</p> */}
-            <ShowMore text={video.desc} maxCharacters={250} />
+            {nodesc ? (
+              <></>
+            ) : (
+              <ShowMore text={video.desc} maxCharacters={250} />
+            )}
           </div>
         );
       })}

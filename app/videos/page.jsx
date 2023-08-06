@@ -7,7 +7,7 @@ const videos = () => {
     {
       id: "tNwHYh5YbZo",
       title: "Period Table: The Elements Dance",
-      desc: `Their dance teacher, Heidi Baumann Renteria, was a student of Professor Zafra Lerman's. Many of the dancers continued to college and one even went for a PhD in biochemistry. Zafra Lerman, as the head of the Science Institute, and several of the faculty members, were teaching these students science through dance. <br />Our hero falls in love with Solid, but “When she warms to him, through his fingers she runs,” and when his love heats up with Liquid, “Her love escaped from him just like a vapor.”`,
+      desc: `Zafra Lerman, the head of the Science Institute, along with several faculty members, taught science to students through dance. Heidi Baumann Renteria, the students' dance teacher, was also a former student of the Science Institute. As a result of this colaboration, many of the dancers pursued higher education, with one even obtaining a PhD in biochemistry.  <br />Our hero falls in love with Solid, but “When she warms to him, through his fingers she runs,” and when his love heats up with Liquid, “Her love escaped from him just like a vapor.”`,
       studentInfo:
         "Performed by low-income and homeless middle school students from Stairway of the Stars Dance Studio in Maywood, Il.",
     },
@@ -25,11 +25,14 @@ const videos = () => {
       studentInfo:
         "A drama written, acted, and filmed by Columbia College theatre students from Professor Zafra Lerman’s class.",
     },
-    {
-      id: "boMp0vz_uRk",
-      title: "Flatland",
-      desc: "Student Project by Todd Ripplinger",
-    },
+  ];
+
+  const addVideos = [
+    // {
+    //   id: "boMp0vz_uRk",
+    //   title: "Flatland",
+    //   desc: "Student Project by Todd Ripplinger",
+    // },
     {
       id: "1dDfRW5v4bI",
       title: "Little Boy",
@@ -42,7 +45,7 @@ const videos = () => {
     },
     {
       id: "JQIvWPYkDZM",
-      title: "Stratosphere Wars : Chlorine Strikes Back",
+      title: "Stratosphere Wars: Chlorine Strikes Back",
       desc: "1999 Student Project by Marcus Jones",
     },
     {
@@ -75,6 +78,11 @@ const videos = () => {
     <div className={styles.container}>
       <h1 className={styles.title}>Videos</h1>
       <VideoBar videos={videos} />
+      <VideoBar videos={addVideos} nodesc={true} />
+      <p className={styles.disclamer}>
+        All videos were produced by students from Professor Lerman's class at
+        the Science Institue, Columbia College Chicago
+      </p>
     </div>
   );
 };

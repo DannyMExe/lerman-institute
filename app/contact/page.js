@@ -15,7 +15,7 @@ function ContactPage() {
       <p>
         Thank you for visiting our website! If you have any questions or
         comments, We&apos;d love to hear from you. Please feel free to reach out
-        via email or any of my social media platforms. We look forward to
+        via email or any of our social media platforms. We look forward to
         connecting with you!
       </p>
       <div className={styles.contactContainer}>
@@ -27,7 +27,7 @@ function ContactPage() {
             info@lermaninstitute.org
           </div>
         </Link>
-        {/* <Link
+        <Link
           href="https://twitter.com/ZafraLerman"
           target="_blank"
           rel="noopener noreferrer"
@@ -50,7 +50,7 @@ function ContactPage() {
             </div>
             Zafra Lerman
           </div>
-        </Link> */}
+        </Link>
         <Link
           href="https://www.youtube.com/@lermaninstitute"
           target="_blank"
