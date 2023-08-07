@@ -1,0 +1,8 @@
+.copyright {
+  text-align: center;
+  font-size: 1em;
+  margin-top: 15px;
+  @media (max-width: 750px) {
+    font-size: 0.8em;
+  }
+}
