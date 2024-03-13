@@ -4,6 +4,15 @@ import styles from "./publications.module.css";
 
 const publications = [
   {
+    id: "0",
+    title:
+      "The Strength To Resist: What gives people the conviction to dissent?",
+    author: "Fagan, A.",
+    publisher: "Psychology Today",
+    pages: "November 2023",
+    url: "https://www.psychologytoday.com/us/articles/202311/the-strength-to-resist",
+  },
+  {
     id: "1",
     title: "Science Education is a Human Right that Belongs to All",
     author: "Lerman, Z.",
