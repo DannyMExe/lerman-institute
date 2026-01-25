@@ -1,8 +1,145 @@
-.copyright {
+/* ========================================
+   FOOTER COMPONENT - Complete Redesign
+   ======================================== */
+
+.footer {
+  background: linear-gradient(180deg, var(--blue-900) 0%, var(--blue-950) 100%);
+  color: var(--text-on-dark);
+  padding: var(--space-16) 0 var(--space-8);
+  margin-top: auto;
+}
+
+.container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* ===== TOP SECTION ===== */
+
+.topSection {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-12);
+}
+
+@media (max-width: 900px) {
+  .topSection {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+}
+
+@media (max-width: 600px) {
+  .topSection {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    text-align: center;
+  }
+}
+
+/* ===== BRAND ===== */
+
+.brand {
+  max-width: 350px;
+}
+
+@media (max-width: 600px) {
+  .brand {
+    max-width: 100%;
+  }
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: white;
+  margin-bottom: var(--space-3);
+}
+
+.brandTagline {
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== FOOTER NAV ===== */
+
+.footerNav h4 {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-4);
+}
+
+.footerNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footerNav a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--text-sm);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footerNav a:hover {
+  color: white;
+}
+
+/* ===== CONTACT ===== */
+
+.contact h4 {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-4);
+}
+
+.email {
+  color: var(--blue-300);
+  font-size: var(--text-base);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.email:hover {
+  color: white;
+}
+
+/* ===== DIVIDER ===== */
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  margin: var(--space-10) 0;
+}
+
+/* ===== BOTTOM SECTION ===== */
+
+.bottomSection {
   text-align: center;
-  font-size: 1em;
-  margin-top: 15px;
-  @media (max-width: 750px) {
-    font-size: 0.8em;
+}
+
+.copyright {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: var(--space-12) 0 var(--space-6);
   }
 }

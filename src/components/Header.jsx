@@ -1,43 +1,45 @@
-import React, { useEffect, useState } from "react";
+"use client";
 import Link from "next/link";
-import { links } from "./Nav/links";
-import Logo from "../../public/LIASLogoNoText_1K.png";
 import Image from "next/image";
-
-import styles from "./Header.module.css"; // Import the CSS module
+import styles from "./Header.module.css";
 import NavBar from "./Nav/NavBar";
-import { useMediaQuery } from "react-responsive";
+import { links } from "./Nav/links";
 
 function Header() {
   return (
-    <div className={styles.headerContainer}>
-      <div className={styles.menu}>
-        <NavBar />
-      </div>
-      <div className={styles.headerMainCenter}>
-        <div className={styles.logoContainer}>
-          <Image src={Logo} height={50} />
-        </div>
-        <Link href="/" className={styles.titleLink}>
-          <h1 className={styles.siteTitle}>
-            Lerman Institute for the Advancement of Science
-          </h1>
-        </Link>
-        {/* <div style={{ width: "38px" }}></div> */}
-      </div>
-      <div className={styles.linksContainer}>
-        {links.map((link, idx) => (
-          <Link
-            id={link.id}
-            key={idx}
-            href={link.path}
-            target={link.id === "malta" ? "_blank" : ""}
-          >
-            {link.title}
+    <header className={styles.header}>
+      {/* Navigation Bar */}
+      <nav className={styles.nav}>
+        <div className={styles.navContainer}>
+          {/* Logo */}
+          <Link href="/" className={styles.logoLink}>
+            <Image
+              src="/LIASLogoNoText_1K.png"
+              alt="LIAS Logo"
+              width={48}
+              height={48}
+              className={styles.logo}
+              priority
+            />
+            <span className={styles.logoText}>Lerman Institute</span>
           </Link>
-        ))}
-      </div>
-    </div>
+
+          {/* Desktop Navigation */}
+          <div className={styles.desktopNav}>
+            {links.map((link) => (
+              <Link key={link.id} href={link.path} className={styles.navLink}>
+                {link.title}
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile Menu */}
+          <div className={styles.mobileMenu}>
+            <NavBar />
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 }
 

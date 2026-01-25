@@ -1,107 +1,51 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./Footer.module.css";
-// import {
-//   FaTwitter,
-//   FaFacebookF,
-//   FaYoutube,
-//   FaLinkedinIn,
-// } from "react-icons/fa";
-// import { MdEmail } from "react-icons/md";
+import { links } from "./Nav/links";
 
-// const Container = styled.div`
-//   /* background-color: #f2f2f2; */
-//   padding: 20px;
-
-//   .social-icons {
-//     display: flex;
-//     justify-content: center;
-//     gap: 5vw;
-//   }
-
-//   .social-icons a {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     color: #333;
-//     color: inherit;
-//     font-size: 1.5em;
-//     margin: 0 10px;
-//     transition: color 0.2s ease-in-out;
-//     text-decoration: none;
-//     @media (max-width: 750px) {
-//       font-size: 1em;
-//     }
-//   }
-
-//   .social-icons a:hover {
-//     color: #1da1f2; /* Twitter blue */
-//   }
-
-//   .social-icons a:hover:nth-of-type(2) {
-//     color: #1877f2; /* Facebook blue */
-//   }
-
-//   .social-icons a:hover:nth-of-type(3) {
-//     color: #ff0000; /* YouTube red */
-//   }
-
-//   .social-icons a:hover:nth-of-type(4) {
-//     color: #0e76a8; /* LinkedIn blue */
-//   }
-
-//   .social-icons a span {
-//     margin-top: 5px;
-//     font-size: 0.8em;
-//   }
-//   .copyright {
-//     text-align: center;
-//     font-size: 1em;
-//     margin-top: 15px;
-//     @media (max-width: 750px) {
-//       font-size: 0.8em;
-//     }
-//   }
-// `;
-
-function Footer({ home, contact }) {
+function Footer() {
   return (
-    <div>
-      {/* <div className="social-icons">
-        <Link
-          href="https://twitter.com/ZafraLerman"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>Twitter</span>
-          <FaTwitter />
-        </Link>
-        <Link href="mailto:zafra@zafralerman.com">
-          <span>Email</span>
-          <MdEmail />
-        </Link>
-        <Link
-          href="https://www.youtube.com/@lermaninstitute"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>YouTube</span>
-          <FaYoutube />
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/zafralerman/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>LinkedIn</span>
-          <FaLinkedinIn />
-        </Link>
-      </div> */}
-      <div className={styles.copyright}>
-        <p>Copyright &copy; 2023 Zafra Lerman</p>
-        <p>info@lermaninstitute.org</p>
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        {/* Top Section */}
+        <div className={styles.topSection}>
+          <div className={styles.brand}>
+            <h3 className={styles.brandName}>Lerman Institute</h3>
+            <p className={styles.brandTagline}>
+              Making science accessible to all through art, music, drama, and dance.
+            </p>
+          </div>
+
+          <nav className={styles.footerNav}>
+            <h4>Quick Links</h4>
+            <ul>
+              {links.map((link) => (
+                <li key={link.id}>
+                  <Link href={link.path}>{link.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className={styles.contact}>
+            <h4>Contact</h4>
+            <a href="mailto:info@lermaninstitute.org" className={styles.email}>
+              info@lermaninstitute.org
+            </a>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className={styles.divider}></div>
+
+        {/* Bottom Section */}
+        <div className={styles.bottomSection}>
+          <p className={styles.copyright}>
+            &copy; {new Date().getFullYear()} Lerman Institute for the Advancement of Science. All rights reserved.
+          </p>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

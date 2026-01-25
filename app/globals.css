@@ -1,84 +1,320 @@
-* {
+/* ========================================
+   LERMAN INSTITUTE - COMPLETE DESIGN SYSTEM
+   A warm, modern, professional educational website
+   ======================================== */
+
+:root {
+  /* ===== COLOR PALETTE ===== */
+
+  /* Warm Neutrals */
+  --white: #ffffff;
+  --warm-white: #fefdfb;
+  --cream-50: #fefcf8;
+  --cream-100: #fdf9f0;
+  --cream-200: #f7f0e3;
+  --cream-300: #efe5d5;
+
+  /* Primary Blue - Trust, Education, Science */
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+  --blue-950: #172554;
+
+  /* Accent - Warm Gold for highlights */
+  --gold-400: #fbbf24;
+  --gold-500: #f59e0b;
+  --gold-600: #d97706;
+
+  /* Text Colors */
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --text-on-dark: #f1f5f9;
+
+  /* Semantic Colors */
+  --success: #10b981;
+  --error: #ef4444;
+
+  /* ===== TYPOGRAPHY ===== */
+  --font-display: 'Lora', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Fluid Type Scale */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.4vw, 1rem);
+  --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.6vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.1rem + 0.8vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+  --text-3xl: clamp(1.875rem, 1.5rem + 1.9vw, 2.5rem);
+  --text-4xl: clamp(2.25rem, 1.8rem + 2.3vw, 3.25rem);
+  --text-5xl: clamp(2.75rem, 2rem + 3.8vw, 4.5rem);
+
+  /* ===== SPACING ===== */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ===== LAYOUT ===== */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1400px;
+
+  /* ===== BORDERS & RADIUS ===== */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  --radius-full: 9999px;
+
+  /* ===== SHADOWS ===== */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+
+  /* Colored Shadows */
+  --shadow-blue: 0 10px 40px -10px rgba(37, 99, 235, 0.3);
+  --shadow-blue-lg: 0 20px 60px -15px rgba(37, 99, 235, 0.35);
+
+  /* ===== TRANSITIONS ===== */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --transition-fast: 150ms var(--ease-out);
+  --transition-base: 250ms var(--ease-out);
+  --transition-slow: 400ms var(--ease-out);
+  --transition-slower: 600ms var(--ease-out);
+}
+
+/* ===== CSS RESET & BASE ===== */
+
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--warm-white);
+  min-height: 100vh;
+}
+
+/* ===== TYPOGRAPHY DEFAULTS ===== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--text-5xl); }
+h2 { font-size: var(--text-4xl); }
+h3 { font-size: var(--text-3xl); }
+h4 { font-size: var(--text-2xl); }
+h5 { font-size: var(--text-xl); }
+h6 { font-size: var(--text-lg); }
+
+p {
+  color: var(--text-secondary);
+  max-width: 70ch;
+}
+
+a {
+  color: inherit;
   text-decoration: none;
+  transition: color var(--transition-fast);
 }
 
-/* body */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-/* Position and sizing of burger button */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 var(--space-4);
+  }
+}
+
+.section {
+  padding: var(--space-24) 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-16) 0;
+  }
+}
+
+/* ===== BURGER MENU STYLES ===== */
+
 .bm-burger-button {
-  position: absolute;
-  width: 30px;
-  height: 24px;
-  right: 20px;
-  top: 36px;
+  position: fixed;
+  width: 28px;
+  height: 22px;
+  right: 24px;
+  top: 25px;
+  z-index: 1001;
 }
 
-/* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: black;
+  background: var(--blue-800);
+  height: 3px !important;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
 }
 
-/* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: white;
+  background: var(--blue-600);
 }
 
-/* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
+  height: 32px !important;
+  width: 32px !important;
+  right: 20px !important;
+  top: 20px !important;
 }
 
-/* Color/shape of close button cross */
 .bm-cross {
-  background: #bdc3c7;
+  background: var(--cream-200);
+  height: 24px !important;
+  width: 3px !important;
 }
 
-/*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
 .bm-menu-wrap {
   position: fixed;
   top: 0;
   height: 100%;
+  transition: all 0.3s ease !important;
 }
 
-/* General sidebar styles */
 .bm-menu {
-  background: #373a47;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  background: linear-gradient(180deg, var(--blue-800) 0%, var(--blue-950) 100%);
+  padding: var(--space-20) var(--space-8) var(--space-8);
+  font-size: 1.1em;
 }
 
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-/* Wrapper for item list */
 .bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
+  color: var(--text-on-dark);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
 }
 
-/* Individual item */
 .bm-item {
-  display: inline-block;
-  color: whitesmoke;
-  font-size: larger;
-  padding-bottom: 15px;
-  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--text-on-dark);
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  outline: none;
 }
 
-/* Styling of overlay */
+.bm-item:hover,
+.bm-item:focus {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(8px);
+  color: var(--blue-200);
+}
+
 .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(23, 37, 84, 0.7) !important;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
-  width: 1000%;
+  bottom: 0;
+  backdrop-filter: blur(4px);
+}
+
+/* ===== SELECTION STYLES ===== */
+
+::selection {
+  background: var(--blue-200);
+  color: var(--blue-900);
+}
+
+/* ===== FOCUS STYLES ===== */
+
+:focus-visible {
+  outline: 2px solid var(--blue-500);
+  outline-offset: 2px;
+}
+
+/* ===== SCROLL BAR ===== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue-300);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-400);
 }
