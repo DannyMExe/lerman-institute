@@ -208,7 +208,7 @@ button {
   height: 22px;
   right: 24px;
   top: 25px;
-  z-index: 1001;
+  z-index: 1200 !important;
 }
 
 .bm-burger-bars {
@@ -239,6 +239,7 @@ button {
   position: fixed;
   top: 0;
   height: 100%;
+  z-index: 1100 !important;
   transition: all 0.3s ease !important;
 }
 
@@ -279,10 +280,12 @@ button {
 
 .bm-overlay {
   background: rgba(23, 37, 84, 0.7) !important;
+  position: fixed !important;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 1050 !important;
   backdrop-filter: blur(4px);
 }
 
